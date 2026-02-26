@@ -1,0 +1,9 @@
+{
+  "name": "league-rift-tetris",
+  "version": "1.0.0",
+  "private": true,
+  "description": "League-themed Tetris playable on localhost.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

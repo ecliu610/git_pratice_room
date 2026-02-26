@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>League Rift Tetris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="panel left">
+      <h1>League Rift Tetris</h1>
+      <p class="subtitle">Classic blocks powered by champion traits.</p>
+
+      <label for="champion">Champion</label>
+      <select id="champion">
+        <option value="garen">Garen - Demacian Resolve</option>
+        <option value="ahri">Ahri - Charm Burst</option>
+        <option value="yasuo">Yasuo - Wind Tempo</option>
+      </select>
+
+      <div class="stats">
+        <div><span>Score</span><strong id="score">0</strong></div>
+        <div><span>Lines</span><strong id="lines">0</strong></div>
+        <div><span>Level</span><strong id="level">1</strong></div>
+      </div>
+
+      <div class="controls">
+        <h2>Controls</h2>
+        <p>Left/Right: Move</p>
+        <p>Up: Rotate</p>
+        <p>Down: Soft drop</p>
+        <p>Space: Hard drop</p>
+        <p>P: Pause</p>
+      </div>
+
+      <button id="startBtn">Start New Game</button>
+      <p id="status">Press Start to enter the Rift.</p>
+    </section>
+
+    <section class="board-wrap">
+      <canvas id="board" width="300" height="600" aria-label="Tetris game board"></canvas>
+    </section>
+
+    <section class="panel right">
+      <h2>Next Piece</h2>
+      <canvas id="next" width="160" height="160"></canvas>
+      <h2>Champion Effect</h2>
+      <p id="effectText"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
